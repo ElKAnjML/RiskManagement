@@ -52,7 +52,7 @@ if all(x > 0 for x in [portfolio_capital, risk_percent, entry_price, stop_loss_p
                 f"""
                 <div style="text-align: center; font-size: 36px; color: #4CAF50;">
                     ✅ {max_shares:.0f} Shares
-                    <div style="font-size: 14px; color: #666;">(${position_value:,.2f} position size - 100% of portfolio)</div>
+                    <div style="font-size: 14px; color: #2e7d32;">(${position_value:,.2f} position size - 100% of portfolio)</div>
                 </div>
                 <div style="text-align: center; font-size: 24px; color: #FF5722;">
                     💸 ${actual_dollar_risk:.2f} Actually Risked ({actual_risk_percent:.2f}% of portfolio)
