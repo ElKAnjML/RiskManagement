@@ -40,4 +40,4 @@ else:
     st.info("ℹ️ Fill in all fields to see results.")
 
 st.markdown("---")
-st.caption("Made with ❤️ by your trading assistant.")
+st.caption("KK")
