@@ -25,12 +25,18 @@ if all(x > 0 for x in [portfolio_capital, risk_percent, entry_price, stop_loss_p
     if risk_per_share > 0:
         shares_to_buy = dollar_risk / risk_per_share
         dollar_loss = shares_to_buy * risk_per_share
+        position_value = shares_to_buy * entry_price
 
         st.markdown("---")
         st.markdown(
             f"""
-            <div style="text-align: center; font-size: 36px; color: #4CAF50;">✅ {shares_to_buy:.0f} Shares</div>
-            <div style="text-align: center; font-size: 24px; color: #FF5722;">💸 ${dollar_loss:.2f} Risked</div>
+            <div style="text-align: center; font-size: 36px; color: #4CAF50;">
+                ✅ {shares_to_buy:.0f} Shares
+                <div style="font-size: 14px; color: #666;">(${position_value:,.2f} position size)</div>
+            </div>
+            <div style="text-align: center; font-size: 24px; color: #FF5722;">
+                💸 ${dollar_loss:.2f} Risked
+            </div>
             """,
             unsafe_allow_html=True,
         )
